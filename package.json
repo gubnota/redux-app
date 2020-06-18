@@ -1,38 +1,45 @@
 {
-  "name": "react-hot-loader-minimal-boilerplate",
+  "name": "react-minimal-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "``` Boilerplate for React with babel and webpack ```",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "7.1.0",
+    "redux": "4.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.9.0",
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.57.3",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1"
+  },
   "scripts": {
-    "dev": "webpack-dev-server --hot --history-api-fallback --open",
-    "start": "webpack-dev-server --hot"
+    "lint": "eslint ./src",
+    "start": "webpack -w -d",
+    "flow": "flow"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate.git"
+    "url": "git+https://github.com/ktrysmt/react-minimal-boilerplate.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate/issues"
-  },
-  "homepage": "https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate#readme",
-  "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^7.2.0",
-    "redux": "^1.0.0-rc"
-  },
-  "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-latest": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
-    "react-hot-loader": "^3.0.0-beta.6",
-    "redux-devtools": "^3.5.0",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
-  }
+  "keywords": [
+    "react",
+    "webpack",
+    "boilerplate",
+    "babel"
+  ],
+  "author": "Kotaro Yoshimatsu <kotaro.yoshimatsu@gmail.com> (https://github.com/ktrysmt)",
+  "license": "MIT",
+  "homepage": "https://github.com/ktrysmt/react-minimal-boilerplate"
 }

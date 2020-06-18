@@ -1,15 +1,33 @@
-# React Hot Loader Minimal Boilerplate
-* [boilerplate](https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate)
-* [Howto](https://gaearon.github.io/react-hot-loader/getstarted/)
-```bash
-git clone https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate redux-app
-```
-Bare minimum needed to have [React Hot Loader](https://github.com/gaearon/react-hot-loader) working with [webpack-dev-server](https://github.com/webpack/webpack-dev-server) and [Babel latest](https://babeljs.io/docs/plugins/preset-latest/) plugin
+# Description
+A minimal development set for react with babel, webpack, css, eslint, flowtype, redux and live-reloading.
 
-## Docs
-See the [Migration to 3.0 guide](https://github.com/gaearon/react-hot-loader/tree/master/docs#migration-to-30) on React Hot Loader repo.
+## Includes
 
-## Try it out
+- React
+- Babel
+- Webpack
+- ESLint
+- Browser-Sync
+- CSS & style loader
+- Flowtype
+- Redux
+
+## Usage
+
 ```
-npm run dev
+git clone https://github.com/gubnota/redux-app YOUR_APP_NAME
+cd YOUR_APP_NAME
+npm i        # Use yarn alternatively
+npm start    # Run webpack to build then start browser-sync
+npm run lint # Lint to src
+npm run flow # Check type of annotated sources with `@flow`
 ```
+
+## Author
+
+- <https://github.com/gubnota>
+based on [react-minimal-boilerplate](https://github.com/ktrysmt/react-minimal-boilerplate)
+
+## License
+
+MIT License

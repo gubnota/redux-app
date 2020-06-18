@@ -1,22 +1,47 @@
-const webpack = require('webpack')
-const path = require('path')
+const path = require('path');
+const webpack = require('webpack');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
-  devtool: 'source-map',
-  entry: {
-    'app': [
-      'babel-polyfill',
-      'react-hot-loader/patch',
-      './src/index'
-    ]
-  },
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].js'
+    path: path.resolve('dist/'),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+      {
+        test: /.jsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              'presets': [
+                'env',
+                'react'
+              ],
+              'plugins': [
+                'transform-class-properties'
+              ]
+            }
+          }
+        ]
+      },
+      {
+        test: /.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
     ]
-  }
+  },
+  plugins: [
+    // new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new BrowserSyncPlugin({
+        server: { baseDir: ['./dist'] }
+    }),
+  ]
 }
